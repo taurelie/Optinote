@@ -1,5 +1,26 @@
-<h2>Bonjour, <%=@user.first_name%> <%=@user.last_name%></h2>
-<h3></h3>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="body">
+  <div class="hello">
+    <h2>Bonjour, <%=@user.first_name%> <%=@user.last_name%></h2>
+  </div>
+  <div class="classroom">
+    <%@current_user.classrooms.each do |classroom| %>
+    <h3><%=classroom.name%></h3>
+    <%end%>
+  </div>
 
-<%console%>
+  <div class="list_students">
+    <%@current_user.classrooms.each do |classroom| %>
+    <div class="container">
+      <%classroom.students.each do |student|%>
+        <div class="row">
+          <div class="col-sm-3" class="imgs_student"><img class="avatar_student" src="https://flyclipart.com/thumb2/avatar-human-male-profile-user-icon-518358.png" alt="avatar_default"></div>
+          <div class="student_name" class="col-sm-6"><%=student.first_name%> <%=student.last_name%></div>
+          <div class="col-sm-3"><img class="avatar_student" src="https://image.pngaaa.com/73/4388073-middle.png" alt="icon_plus"></div>
+        </div>
+      <%end%>
+    </div>
+    <%end%>
+
+  </div>
+
+</div>

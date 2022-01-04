@@ -1,1 +1,23 @@
 // Specific CSS for your home-page
+.hello {
+  text-align: center;
+}
+
+.classroom {
+  text-align: center;
+}
+
+.student {
+  display: flex;
+  align-items: center
+}
+
+.student_name {
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+.imgs_student {
+  align-items: center;
+}
