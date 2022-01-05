@@ -2,6 +2,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
+    @observations = Observation.where(student_id: @student.id)
   end
 
   def index
