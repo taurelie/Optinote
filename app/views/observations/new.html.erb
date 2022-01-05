@@ -1,0 +1,17 @@
+
+<div class="container_form">
+<p>Observations:</p>
+  <div class="form">
+    <%= simple_form_for (@observation) do |f| %>
+    <%= f.input :category,
+                as: :radio_buttons,
+                collection_wrapper_tag: 'div',
+                collection_wrapper_class: 'category-wrapper',
+                item_wrapper_class: 'category-item',
+                input_html: {class: 'category-selector'},
+                collection: Observation::CATEGORY %>
+    <%= f.input :note %>
+
+    <% end %>
+  </div>
+</div>
