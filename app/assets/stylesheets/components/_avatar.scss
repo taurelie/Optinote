@@ -24,5 +24,6 @@
   border-radius: 50%;
   border: white 2px solid;
   object-position: center;
-  object-fit: crop;
+  object-fit: fill;
+  margin: 5px;
 }
