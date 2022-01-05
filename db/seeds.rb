@@ -1,7 +1,7 @@
 puts 'cleaning DB'
-User.destroy_all
-Classroom.destroy_all
 Student.destroy_all
+Classroom.destroy_all
+User.destroy_all
 
 # Seed Users
 puts 'seeds user'
