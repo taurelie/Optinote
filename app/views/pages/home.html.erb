@@ -12,10 +12,10 @@
     <%@current_user.classrooms.each do |classroom| %>
     <div class="container">
       <%classroom.students.each do |student|%>
-        <div class="row">
-          <div class="col-4" class="imgs_student"><img class="avatar_student" src="https://flyclipart.com/thumb2/avatar-human-male-profile-user-icon-518358.png" alt="avatar_default"></div>
+        <div class="row align-items-center">
+          <div class="col-4-float-left" class="imgs_student"><img class="avatar_student" src="https://flyclipart.com/thumb2/avatar-human-male-profile-user-icon-518358.png" alt="avatar_default"></div>
           <div class="student_name" class="col-4"><%=student.first_name%><br><%=student.last_name.upcase!%></div>
-          <div class="col-4" class="btn_plus"><img class="avatar-bordered" src="https://image.pngaaa.com/73/4388073-middle.png" alt="icon_plus"></div>
+          <div class="col-4-float-right"><img class="btn_plus" src="https://image.pngaaa.com/73/4388073-middle.png" alt="icon_plus"></div>
         </div>
       <%end%>
     </div>
