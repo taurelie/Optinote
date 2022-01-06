@@ -1,0 +1,49 @@
+
+.filterDiv {
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.red {
+  background-color: #F05D09;
+}
+
+.green {
+  background-color: #69FA00;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
