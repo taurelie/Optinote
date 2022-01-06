@@ -12,24 +12,38 @@
     <%@current_user.classrooms.each do |classroom| %>
       <div class="container">
         <%classroom.students.each do |student|%>
+          <%pins = false%>
+          <%@current_user.observations.each do |observation|%>
+            <%if observation.student_id == student.id%>
+              <%pins = true%>
+            <%end%>
+          <%end%>
           <div class="row align-items-center">
-            <div class="col-4 justify-content-end" class="imgs_student"><a href="<%= student_path(student.id) %>">
-              <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
-                {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
-                {:radius=>"max"}],
-              :overlay => "notes_pile_sngwow",
-                 :width => 20, :crop => :scale,
-                 :gravity => :north_west) %></a>
+            <div class="col-4 justify-content-end" class="imgs_student">
+              <a href="<%= student_path(student.id) %>">
+              <%if pins == true %>
+                <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
+                  {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
+                  {:radius=>"max"}],
+                :overlay => "notes_pile_sngwow",
+                  :width => 20, :crop => :scale,
+                  :gravity => :north_west) %></a>
+              <% else %>
+                <div class="col-4-float-left" class="imgs_student">
+                <a href="<%= student_path(student.id) %>">
+                <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
+                  {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
+                  {:radius=>"max"}])%></a>
+                </div>
+              <% end %>
             </div>
             <div class="student_name" class="col-4 justify-content-center"><p><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
             <div class="col-4 justify-content-center"><a href="<%= new_observation_path %>">
-              <%= cl_image_tag('notes_qaexuf', height: 40, width: 40, :crop=>:fill)%>
+              <%= cl_image_tag('notes_qaexuf', height: 40, width: 40, :crop=>:fill)%></a>
             </div>
           </div>
         <%end%>
       </div>
     <%end%>
-
   </div>
-
 </div>
