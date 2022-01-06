@@ -1,20 +1,38 @@
 
+<div class="card-student">
+  <img src="https://1en5vh48t4rqdnq1j3h9ihn4-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/child-bored-in-school-860x420.jpeg" />
+  <div class="card-student-infos">
+  <h2><strong><%=@student.first_name%></strong> <%=@student.last_name%></h2>
+  <h3><%=@student.classroom.name%></h3>
+  </div>
+</div>
+
 <div class="container_form">
   <p>Observations:</p>
     <div class="form">
-      <%= simple_form_for (@observation) do |f| %>
+      <%= simple_form_for [@observation] do |f| %>
       <%= f.input :category,
                   as: :radio_buttons,
                   collection_wrapper_tag: 'div',
                   collection_wrapper_class: 'category-wrapper',
                   item_wrapper_class: 'category-item',
-                  input_html: {class: 'category-selector'},
+                  input_html: {class: 'categor-selector'},
                   collection: Observation::CATEGORY %>
       <%= f.input :note %>
+      <%= f.input :obs_color,
+                  as: :radio_buttons,
+                  collection_wrapper_tag: 'div',
+                  collection_wrapper_class: 'obs_color-wrapper',
+                  item_wrapper_class: 'obs_color-item',
+                  input_html: {class: 'obs_color-selector'},
+                  collection: Observation::OBS_COLOR %>
+
+      <%= f.button :submit %>
       <% end %>
     </div>
 
-    <div class="custom-radios">
+
+    <%# <div class="custom-radios">
       <div>
         <input type="radio" id="color-1" name="color" value="color-1" checked>
         <label for="color-1">
@@ -42,6 +60,6 @@
         </label>
       </div>
     </div>
-  </div>
+  </div> %>
 
 </div>
