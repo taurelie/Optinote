@@ -22,7 +22,7 @@
                  :gravity => :north_west) %></a>
             </div>
             <div class="student_name" class="col-4 justify-content-center"><p><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
-            <div class="col-4 justify-content-center"><a href="<%= new_observation_path %>">
+            <div class="col-4 justify-content-center"><a href="<%= new_observation_path(student) %>">
               <%= cl_image_tag('notes_qaexuf', height: 40, width: 40, :crop=>:fill)%>
             </div>
           </div>
