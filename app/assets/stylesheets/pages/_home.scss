@@ -5,6 +5,9 @@
 
 .classroom {
   text-align: center;
+  background-color: white;
+  box-shadow: #95a5a6;
+  padding: 10px;
 }
 
 .student {
@@ -21,4 +24,8 @@
 .imgs_student {
   display: flex;
   align-items: flex-start;
+}
+
+.list_students {
+  padding: 20px;
 }
