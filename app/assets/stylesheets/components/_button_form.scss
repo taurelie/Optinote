@@ -30,6 +30,43 @@
   color: white !important;
 }
 
+// button colors
+
+.obs_color-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.obs_color-item {
+  flex: 0 0 30%;
+}
+
+.obs_color-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.obs_color-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.obs_color-selector:checked + label {
+  color: rgb(24, 218, 88) !important;
+}
+
+
+
+
 //  test checkbox colors
  // Colors
 $color-1: #2ecc71;
