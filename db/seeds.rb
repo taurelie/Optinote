@@ -51,4 +51,7 @@ comportement1 = Observation.create!(obs_date: 20211215, category: "Comportement"
 environnement1 = Observation.create!(obs_date: 20211011, category: "Environnement", note: "Devoirs non-faits", obs_color: "Red", student: lrodriguez, user: jdubois)
 autre1 = Observation.create!(obs_date: 20211215, category: "Autre", note: "Parents ne viennent pas aux convocations", obs_color: "Red", student: lrodriguez, user: jdubois)
 
+puts 'seeds img'
+img_add_note = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641390506/notes_qaexuf.png')
+
 puts 'done'
