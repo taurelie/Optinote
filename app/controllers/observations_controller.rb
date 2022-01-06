@@ -1,16 +1,27 @@
+require "pry-byebug"
 class ObservationsController < ApplicationController
   def new
+    @student = Student.find(params[:id])
     @observation = Observation.new
+    @observation.student = @student
   end
 
-#   def createb
-#     @observation = Message.new(observation_params) # needed to instantiate the form_for
-#     @observation.save
-#   end
+  def create
+    @student = Student.find(params[:id])
+    @observation = Observation.new(observation_params)
+    @observation.student = @student
+    @observation.user = current_user
+    # binding.pry
+    if @observation.save
+      redirect_to student_path(@student)
+    else
+      render :new
+    end
+  end
 
-#   private
+  private
 
-#   def observation_params
-#     params.require(:observation).permit(:name)
-#   end
+  def observation_params
+    params.require(:observation).permit(:obs_date, :category, :note, :obs_color, :student_id, :user_id)
+  end
 end
