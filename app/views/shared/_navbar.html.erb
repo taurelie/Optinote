@@ -21,9 +21,11 @@
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Observations", new_observation_path(@student, @observation), class: "nav-link" %>
-        </li>
+          <% if @student != nil %>
+            <li class="nav-item">
+              <%= link_to "Observations", new_observation_path(id: @student.id), class: "nav-link" %>
+            </li>
+          <% end %>
       <% else %>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
