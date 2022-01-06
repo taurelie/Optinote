@@ -13,9 +13,11 @@
     <div class="container">
       <%classroom.students.each do |student|%>
         <div class="row">
-          <div class="col-4-float-left" class="imgs_student"><img class="avatar_student" src="https://flyclipart.com/thumb2/avatar-human-male-profile-user-icon-518358.png" alt="avatar_default"></div>
-          <div class="student_name" class="col-4"><p><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
-          <div class="col-4-float-right"><%=cl_image_tag 'notes_qaexuf', height: 40, width: 40, crop: :fill %></div>
+          <div class="col-4 justify-content-center" class="imgs_student"><a href="<%= student_path(student.id) %>">
+            <img class="avatar_student" src="https://flyclipart.com/thumb2/avatar-human-male-profile-user-icon-518358.png" alt="avatar_default"></a>
+          </div>
+          <div class="student_name" class="col-4 justify-content-center"><p><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
+          <div class="col-4 justify-content-center"><%=cl_image_tag 'notes_qaexuf', height: 40, width: 40, crop: :fill %></div>
         </div>
       <%end%>
     </div>
