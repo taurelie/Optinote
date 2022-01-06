@@ -10,17 +10,24 @@
 
   <div class="list_students">
     <%@current_user.classrooms.each do |classroom| %>
-    <div class="container">
-      <%classroom.students.each do |student|%>
-        <div class="row">
-          <div class="col-4 justify-content-center" class="imgs_student"><a href="<%= student_path(student.id) %>">
-            <img class="avatar_student" src="https://flyclipart.com/thumb2/avatar-human-male-profile-user-icon-518358.png" alt="avatar_default"></a>
+      <div class="container">
+        <%classroom.students.each do |student|%>
+          <div class="row align-items-center">
+            <div class="col-4 justify-content-end" class="imgs_student"><a href="<%= student_path(student.id) %>">
+              <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
+                {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
+                {:radius=>"max"}],
+              :overlay => "notes_pile_sngwow",
+                 :width => 20, :crop => :scale,
+                 :gravity => :north_west) %></a>
+            </div>
+            <div class="student_name" class="col-4 justify-content-center"><p><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
+            <div class="col-4 justify-content-center"><a href="<%= new_observation_path %>">
+              <%= cl_image_tag('notes_qaexuf', height: 40, width: 40, :crop=>:fill)%>
+            </div>
           </div>
-          <div class="student_name" class="col-4 justify-content-center"><p><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
-          <div class="col-4 justify-content-center"><%=cl_image_tag 'notes_qaexuf', height: 40, width: 40, crop: :fill %></div>
-        </div>
-      <%end%>
-    </div>
+        <%end%>
+      </div>
     <%end%>
 
   </div>
