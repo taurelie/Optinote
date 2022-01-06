@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :students
+  resources :observations
 
   resources :students do
     member do
