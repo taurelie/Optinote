@@ -1,17 +1,13 @@
 
 .filterDiv {
   background-color: #2196F3;
-  color: #ffffff;
+  color: #FFFFFF;
   width: 100%;
   line-height: 50px;
-  display: flex;
-  justify-content: space-around;
+  text-align: left;
   margin: 2px;
-}
-
-
-.display_info_obs {
-  padding-left: 5%;
+  padding-left: 2%;
+  display: none;
 }
 
 .red {
