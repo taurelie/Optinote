@@ -1,5 +1,5 @@
-<h1>coucou de show</h1>
 
+<br>
 <div class="card-student">
   <img src="https://1en5vh48t4rqdnq1j3h9ihn4-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/child-bored-in-school-860x420.jpeg" />
   <div class="card-student-infos">
@@ -16,9 +16,13 @@
 </div>
 
 <div class="container">
-<% @student.observations.each do |obs| %>
-<div class="filterDiv <%= obs.obs_color.downcase %>"><%= obs.note %></div>
-      <%end%>
+  <% @student.observations.each do |obs| %>
+    <div class="filterDiv <%= obs.obs_color.downcase %>">
+      <div class="display_info_obs">
+        <%= "#{obs.obs_date}   #{obs.note}" %>
+      </div>
+    </div>
+  <%end%>
 </div>
 
 <script>
