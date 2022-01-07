@@ -1,4 +1,4 @@
-require "pry-byebug"
+
 class ObservationsController < ApplicationController
   def new
     @student = Student.find(params[:id])
