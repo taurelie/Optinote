@@ -21,14 +21,16 @@
   font-size: 12px;
   text-align: center;
   align-items: center;
-  padding: 10px 10px 30px 10px;
-  border: 1px solid #EAEAEA;
+  padding: 12px;
+  margin: 3%;
+  border: 1px solid #e7e7e7;
   border-radius: 8px;
   background-color: white;
 }
 
 .category-selector:checked + label {
   color: white !important;
+  background-color:rgb(122, 159, 177);
 }
 
 // button colors
