@@ -112,10 +112,14 @@ comportement1 = Observation.create!(obs_date: 20211215, category: "Comportement"
 environnement1 = Observation.create!(obs_date: 20211011, category: "Environnement", note: "Devoirs non-faits", obs_color: "Red", student: lrodriguez, user: gjing)
 autre1 = Observation.create!(obs_date: 20211215, category: "Autre", note: "Parents ne viennent pas aux convocations", obs_color: "Red", student: lrodriguez, user: gjing)
 retard1 = Observation.create!(obs_date: 20210921, category: "Retard", note: "Retard 15mn", obs_color: "Red", student: slamy, user: gjing)
-retard2 = Observation.create!(obs_date: 20211013, category: "Retard", note: "Retard 15mn", obs_color: "Red", student: slamy, user: gjing)
-retard3 = Observation.create!(obs_date: 20211126, category: "Retard", note: "Retard 15mn", obs_color: "Red", student: slamy, user: gjing)
-retard4 = Observation.create!(obs_date: 20211207, category: "Retard", note: "Retard 15mn", obs_color: "Red", student: slamy, user: gjing)
-retard5 = Observation.create!(obs_date: 20211216, category: "Retard", note: "Retard 15mn", obs_color: "Red", student: slamy, user: gjing)
+b1 = Observation.create!(obs_date: 20211013, category: "Relation à l'autre", note: "Grand politesse", obs_color: "Green", student: slamy, user: gjing)
+retard2 = Observation.create!(obs_date: 20211126, category: "Retard", note: "Retard 15mn", obs_color: "Red", student: slamy, user: gjing)
+retard3 = Observation.create!(obs_date: 20211207, category: "Retard", note: "Retard 15mn", obs_color: "Red", student: slamy, user: gjing)
+b2 = Observation.create!(obs_date: 20211011, category: "Relation à l'autre", note: "S'occupe bien de ses camarades", obs_color: "Green", student: ipetit, user: gjing)
+b3 = Observation.create!(obs_date: 20211114, category: "Environnement", note: "Vient à vélo", obs_color: "Green", student: slamy, user: gjing)
+b4 = Observation.create!(obs_date: 20211215, category: "Environnement", note: "Devoirs parfaits", obs_color: "Green", student: slamy, user: gjing)
+b5 = Observation.create!(obs_date: 20211102, category: "Expression", note: "Bonne expression", obs_color: "Green", student: ipetit, user: gjing)
+b6 = Observation.create!(obs_date: 20211215, category: "Relation à l'autre", note: "Participe à la bonne ambiance de la classe", obs_color: "Green", student: ipetit, user: gjing)
 
 puts 'seeds img'
 img_add_note = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641554446/notes_owhf09.png')
