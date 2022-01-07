@@ -1,7 +1,7 @@
 
 <br>
 <div class="card-student">
-  <%= cl_image_tag(@student.photo.key, :format => :png, :gravity=>"face")%>
+  <%= cl_image_tag(@student.photo.key, :format => :png)%>
   <div class="card-student-infos">
     <h2><strong><%=@student.first_name%></strong> <%=@student.last_name%></h2>
     <h3><%=@student.classroom.name%></h3>
