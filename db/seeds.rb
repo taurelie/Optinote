@@ -111,10 +111,10 @@ math1 = Observation.create!(obs_date: 20211102, category: "Mathématiques", note
 comportement1 = Observation.create!(obs_date: 20211215, category: "Comportement", note: "A un principe de réalité erroné (la récréation dure deux semaines)", obs_color: "Grey", student: lrodriguez, user: gjing)
 environnement1 = Observation.create!(obs_date: 20211011, category: "Environnement", note: "Devoirs non-faits", obs_color: "Red", student: lrodriguez, user: gjing)
 autre1 = Observation.create!(obs_date: 20210921, category: "Autre", note: "Parents ne viennent pas aux convocations", obs_color: "Red", student: lrodriguez, user: gjing)
-retard1 = Observation.create!(obs_date: 20211011, category: "Retard", note: "20mn", obs_color: "Red", student: slamy, user: gjing)
-retard1 = Observation.create!(obs_date: 20211129, category: "Retard", note: "15mn", obs_color: "Red", student: slamy, user: gjing)
-retard1 = Observation.create!(obs_date: 20211210, category: "Retard", note: "20mn", obs_color: "Red", student: slamy, user: gjing)
-retard1 = Observation.create!(obs_date: 20211215, category: "Retard", note: "25mn", obs_color: "Red", student: slamy, user: gjing)
+retard1 = Observation.create!(obs_date: 20211011, category: "Retard", note: "Retard 20mn", obs_color: "Red", student: slamy, user: gjing)
+retard1 = Observation.create!(obs_date: 20211129, category: "Retard", note: "Retard 15mn", obs_color: "Red", student: slamy, user: gjing)
+retard1 = Observation.create!(obs_date: 20211210, category: "Retard", note: "Retard 20mn", obs_color: "Red", student: slamy, user: gjing)
+retard1 = Observation.create!(obs_date: 20211215, category: "Retard", note: "Retard 25mn", obs_color: "Red", student: slamy, user: gjing)
 
 puts 'seeds img'
 img_add_note = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641554151/noteadd_t3diri.png')
