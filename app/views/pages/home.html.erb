@@ -11,7 +11,7 @@
   <div class="list_students">
     <%@current_user.classrooms.each do |classroom| %>
       <div class="container">
-        <%classroom.students.each do |student|%>
+        <%classroom.students.order(:last_name).each do |student|%>
           <%pins = false%>
           <%@current_user.observations.each do |observation|%>
             <%if observation.student_id == student.id%>
@@ -25,9 +25,9 @@
                 <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
                   {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
                   {:radius=>"max"}],
-                :overlay => "notes_pile_sngwow",
-                  :width => 20, :crop => :scale,
-                  :gravity => :north_west) %></a>
+                :overlay => "notes_pile_sngwow.png",
+                  :width => 30, :crop => :scale,
+                  :gravity => :north_west, :x => -10, :y => -5) %></a>
               <% else %>
                 <div class="col-4-float-left" class="imgs_student">
                 <a href="<%= student_path(student.id) %>">
@@ -39,7 +39,7 @@
             </div>
             <div class="student_name" class="col-4 justify-content-center"><p><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
             <div class="col-4 justify-content-center"><a href="<%= new_observation_path(student) %>">
-              <%= cl_image_tag('notes_qaexuf', height: 40, width: 40, :crop=>:fill)%>
+              <img class="note_plus" src="https://res.cloudinary.com/dowgjinna/image/upload/v1641554446/notes_owhf09.png"></a>
             </div>
           </div>
         <%end%>
