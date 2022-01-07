@@ -121,9 +121,6 @@ b4 = Observation.create!(obs_date: 20211215, category: "Environnement", note: "D
 b5 = Observation.create!(obs_date: 20211102, category: "Expression", note: "Bonne expression", obs_color: "Green", student: ipetit, user: gjing)
 b6 = Observation.create!(obs_date: 20211215, category: "Relation à l'autre", note: "Participe à la bonne ambiance de la classe", obs_color: "Green", student: ipetit, user: gjing)
 
-
-
-
 puts 'seeds img'
 img_add_note = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641554446/notes_owhf09.png')
 img_note_avatar = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641478873/notes_pile_sngwow.png')
