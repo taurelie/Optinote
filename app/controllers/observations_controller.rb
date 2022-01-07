@@ -11,7 +11,6 @@ class ObservationsController < ApplicationController
     @observation = Observation.new(observation_params)
     @observation.student = @student
     @observation.user = current_user
-    # binding.pry
     if @observation.save
       redirect_to student_path(@student)
     else
