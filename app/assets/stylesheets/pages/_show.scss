@@ -4,9 +4,14 @@
   color: #ffffff;
   width: 100%;
   line-height: 50px;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
   margin: 2px;
-  display: none;
+}
+
+
+.display_info_obs {
+  padding-left: 5%;
 }
 
 .red {
