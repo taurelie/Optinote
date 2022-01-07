@@ -1,7 +1,7 @@
 
 <br>
 <div class="card-student">
-  <img src="https://1en5vh48t4rqdnq1j3h9ihn4-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/child-bored-in-school-860x420.jpeg" />
+  <%= cl_image_tag(@student.photo.key, :format => :png, :gravity=>"face")%>
   <div class="card-student-infos">
     <h2><strong><%=@student.first_name%></strong> <%=@student.last_name%></h2>
     <h3><%=@student.classroom.name%></h3>
