@@ -18,6 +18,12 @@ class ObservationsController < ApplicationController
     end
   end
 
+  def destroy
+    @observation = Observation.find(params[:id])
+    @observation.destroy
+    redirect_to student_path(@student)
+  end
+
   private
 
   def observation_params
