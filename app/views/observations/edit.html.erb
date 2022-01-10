@@ -10,21 +10,23 @@
 <div class="container_form">
   <div class="form">
     <%= simple_form_for(@observation) do |f| %>
-      <%= f.input :category,
-                    as: :radio_buttons,
-                    collection_wrapper_tag: 'div',
-                    collection_wrapper_class: 'category-wrapper',
-                    item_wrapper_class: 'category-item',
-                    input_html: {class: 'category-selector'},
-              collection: Observation::CATEGORY %>
-        <%= f.input :note %>
-        <%= f.input :obs_color,
-                    as: :radio_buttons,
-                    collection_wrapper_tag: 'div',
-                    collection_wrapper_class: 'obs_color-wrapper',
-                    item_wrapper_class: 'obs_color-item',
-                    input_html: {class: 'obs_color-selector'},
-                    collection: Observation::OBS_COLOR %>
+      <%= f.input :category, :label => "Catégorie de l'Observation:",
+                  as: :radio_buttons,
+                  error: 'Sélectionnez une catégorie',
+                  collection_wrapper_tag: 'div',
+                  collection_wrapper_class: 'category-wrapper',
+                  item_wrapper_class: 'category-item',
+                  input_html: {class: 'category-selector'},
+            collection: Observation::CATEGORY %>
+      <%= f.input :note, :label => "Commentaire:" %>
+      <%= f.input :obs_color,:label => "Évaluation:",
+                  as: :radio_buttons,
+                  error: "Sélectionnez une couleur pour l'évaluation",
+                  collection_wrapper_tag: 'div',
+                  collection_wrapper_class: 'obs_color-wrapper',
+                  item_wrapper_class: 'obs_color-item',
+                  input_html: {class: 'obs_color-selector'},
+                  collection: Observation::OBS_COLOR %>
 
         <%= f.button :submit %>
     <% end %>

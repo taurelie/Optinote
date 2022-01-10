@@ -1,7 +1,16 @@
+.edit_link {
+  position: start;
+  color: #f1c40f;
+}
+
+.delete_link {
+  position: end;
+  color: #f1c40f;
+}
+
 #bttns {
   display: flex;
   flex-wrap: wrap;
-
   align-items: start;
   justify-content: space-between;
 }
