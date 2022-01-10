@@ -16,4 +16,8 @@ Rails.application.routes.draw do
 
   resources :observations
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  delete "observations/:id", to: "observations#destroy"
+  get "observations/:id/edit", to: "observations#edit"
+  patch "observations/:id", to: "observations#update"
 end

@@ -1,17 +1,15 @@
 
 <div class="card-student">
-  <%= cl_image_tag(@student.photo.key, :format => :png)%>
-  <%# <img src="https://1en5vh48t4rqdnq1j3h9ihn4-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/child-bored-in-school-860x420.jpeg" /> %>
+  <%= cl_image_tag(@observation.student.photo.key, :format => :png)%>
   <div class="card-student-infos">
-  <h2><strong><%=@student.first_name%></strong> <%=@student.last_name%></h2>
-  <h3><%=@student.classroom.name%></h3>
+  <h2><strong><%=@observation.student.first_name%></strong> <%=@observation.student.last_name%></h2>
+  <h3><%=@observation.student.classroom.name%></h3>
   </div>
 </div>
 
 <div class="container_form">
-  <p></p>
-    <div class="form">
-      <%= simple_form_for [@observation] do |f| %>
+  <div class="form">
+    <%= simple_form_for(@observation) do |f| %>
       <%= f.input :category, :label => "Catégorie de l'Observation:",
                   as: :radio_buttons,
                   error: 'Sélectionnez une catégorie',
@@ -19,7 +17,7 @@
                   collection_wrapper_class: 'category-wrapper',
                   item_wrapper_class: 'category-item',
                   input_html: {class: 'category-selector'},
-                  collection: Observation::CATEGORY %>
+            collection: Observation::CATEGORY %>
       <%= f.input :note, :label => "Commentaire:" %>
       <%= f.input :obs_color,:label => "Évaluation:",
                   as: :radio_buttons,
@@ -30,7 +28,7 @@
                   input_html: {class: 'obs_color-selector'},
                   collection: Observation::OBS_COLOR %>
 
-
-      <%= f.button :submit, "valider", :class => "btn_valider" %>
-      <% end %>
-    </div>
+        <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
