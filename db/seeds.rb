@@ -27,7 +27,8 @@ img_fatia = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471
 img_timeo = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471952/WAGON/Tim%C3%A9o_qfa1b0.jpg')
 
 puts 'seeds user'
-gjing = User.create!(email: 'guole.jing@gmail.com', password: '123456789', password_confirmation: '123456789', first_name: 'Guole', last_name: 'Jing')
+gjing = User.create!(email: 'guole.jing@gmail.com', password: '123456789', password_confirmation: '123456789', first_name: 'Guole', last_name: 'Jing', admin: true)
+vrebeix = User.create!(email: 'valentin.rebeix@coursozanam.fr', password: '123456789', password_confirmation: '123456789', first_name: 'Valentin', last_name: 'Rebeix', admin: true)
 
 puts 'seeds classroom'
 ce1 = Classroom.create!(name: 'CE1', user: gjing)
