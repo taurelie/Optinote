@@ -3,4 +3,13 @@ class Observation < ApplicationRecord
   OBS_COLOR = ["green", "grey", "red"]
   belongs_to :student
   belongs_to :user
+
+  def creation_date
+    self.obs_date || self.created_at
+  end
+
+  def display_date
+    self.creation_date.strftime("%d/%m/%Y")
+  end
+
 end
