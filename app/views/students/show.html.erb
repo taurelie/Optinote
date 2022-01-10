@@ -15,7 +15,7 @@
 </div>
 
 <div class="container">
-  <% @student.observations.each do |obs| %>
+  <% @student.observations.order(obs_date: :desc).each do |obs| %>
     <div class="filterDiv <%= obs.obs_color.downcase %>"><%= "#{obs.obs_date}   " %><%= obs.category %>
     </div>
   <%end%>
