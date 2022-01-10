@@ -29,6 +29,18 @@ class ObservationsController < ApplicationController
     @observations = Observation.all
   end
 
+  def edit
+    @observation = Observation.find(params[:id])
+  end
+
+  def update
+    @observation = Observation.find(params[:id])
+    @student = @observation.student
+    @observation.update(observation_params)
+    # Will raise ActiveModel::ForbiddenAttributesError
+    redirect_to student_path(@student)
+  end
+
   private
 
   def observation_params

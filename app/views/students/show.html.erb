@@ -19,10 +19,7 @@
     <div class="filterDiv <%= obs.obs_color.downcase %>"><%= "#{obs.obs_date}   " %><%= obs.note %>
       <div id='bttns'>
         <div id="bttn_edit">
-          <%= link_to "Edit",
-             %>
-          <a data-confirm="Etes-vous sûr(e) ?" rel="nofollow" data-method="delete" href="/observations/#{obs.id}">
-          </a>
+          <%= link_to "Editer", edit_observation_path(obs) %>
         </div>
         <div id="bttn_delete">
           <%= link_to "Supprimer",
