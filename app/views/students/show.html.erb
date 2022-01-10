@@ -16,7 +16,7 @@
 
 <div class="container">
   <% @student.observations.each do |obs| %>
-    <div class="filterDiv <%= obs.obs_color.downcase %>"><%= "#{obs.display_date}   " %><%= obs.note %>
+    <div class="filterDiv <%= obs.obs_color.downcase %>"><%= "#{obs.display_date}   " %><%= obs.category %>
     </div>
   <%end%>
 </div>
