@@ -124,5 +124,7 @@ b6 = Observation.create!(obs_date: 20211215, category: "Relation à l'autre", no
 puts 'seeds img'
 img_add_note = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641554446/notes_owhf09.png')
 img_note_avatar = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641478873/notes_pile_sngwow.png')
+img_note_avatar2 = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641802088/notepins2_owhk7h.png')
+img_add_note2 = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641802443/noteadd2_gdqhf3.png')
 
 puts 'done'
