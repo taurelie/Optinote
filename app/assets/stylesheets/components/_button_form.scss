@@ -67,7 +67,9 @@
   color: rgb(24, 218, 88) !important;
 }
 
-
+.obs_color-item + #observation_obs_color_green {
+  background-color: green;
+}
 
 
 //  test checkbox colors
