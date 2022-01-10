@@ -19,17 +19,17 @@
             <%end%>
           <%end%>
           <div class="row align-items-center">
-            <div class="col-4 justify-content-end" class="imgs_student">
+            <div class="col-4 justify-content-center" class="imgs_student" class="d-flex align-items-center">
               <a href="<%= student_path(student.id) %>">
               <%if pins == true %>
                 <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
                   {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
                   {:radius=>"max"}],
-                :overlay => "notes_pile_sngwow",
-                  :width => 30, :crop => :scale,
-                  :gravity => :north_west, :x => -10, :y => -5) %></a>
+                :overlay => "notepins2_owhk7h.png",
+                  :width => 20, :crop => :scale,
+                  :gravity => :north_west) %></a>
               <% else %>
-                <div class="col-4-float-left" class="imgs_student">
+                <div class="col-4-float-lzft" class="imgs_student" class="d-flex align-items-center">
                 <a href="<%= student_path(student.id) %>">
                 <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
                   {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
@@ -37,9 +37,9 @@
                 </div>
               <% end %>
             </div>
-            <div class="student_name" class="col-4 justify-content-center"><p><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
-            <div class="col-4 justify-content-center"><a href="<%= new_observation_path(student) %>">
-              <img class="plusadd" src="https://res.cloudinary.com/dowgjinna/image/upload/v1641554446/notes_owhf09.png"></a>
+            <div class="student_name" class="col-4 justify-content-center" class="d-flex align-items-center"><p><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
+            <div class="col-4 justify-content-center" class="d-flex align-items-center"><a href="<%= new_observation_path(student) %>">
+              <img class="plusadd" src="https://res.cloudinary.com/dowgjinna/image/upload/v1641802443/noteadd2_gdqhf3.png"></a>
             </div>
           </div>
         <%end%>
