@@ -15,9 +15,9 @@
 </div>
 
 <div class="container">
-  <% @student.observations.each do |obs| %>
+  <% @observations.each do |obs| %>
     <div class="filterDiv <%= obs.obs_color.downcase %>">
-      <%= "#{obs.obs_date}   " %><%= obs.note %>
+      <%= "#{obs.display_date}" %>    -     <%= obs.category %>
       <div id='bttns'>
         <%# <div id="bttn_edit"> %>
           <%= link_to "Editer", edit_observation_path(obs), class:"edit_link" %>
