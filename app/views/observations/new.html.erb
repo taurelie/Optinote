@@ -8,24 +8,24 @@
 </div>
 
 <div class="container_form">
-  <p>Observations:</p>
+  <p></p>
     <div class="form">
       <%= simple_form_for [@observation] do |f| %>
-      <%= f.input :category,
+      <%= f.input :category, :label => "Catégorie de l'Observation:",
                   as: :radio_buttons,
                   collection_wrapper_tag: 'div',
                   collection_wrapper_class: 'category-wrapper',
                   item_wrapper_class: 'category-item',
                   input_html: {class: 'category-selector'},
             collection: Observation::CATEGORY %>
-      <%= f.input :note %>
-      <%= f.input :obs_color,
+      <%= f.input :note, :label => "Commentaire:" %>
+      <%= f.input :obs_color,:label => "Évaluation:",
                   as: :radio_buttons,
                   collection_wrapper_tag: 'div',
                   collection_wrapper_class: 'obs_color-wrapper',
                   item_wrapper_class: 'obs_color-item',
                   input_html: {class: 'obs_color-selector'},
-                  collection: Observation::OBS_COLOR %>
+                  :collection => ["green", "grey", "red"], :selected => "green", :value => "#00FFFF" %>
 
 
       <%= f.button :submit, "valider", :class => "btn_valider" %>
