@@ -1,5 +1,4 @@
 class StudentsController < ApplicationController
-
   def show
     @student = Student.find(params[:id])
     @observation = Observation.where(student_id: @student.id)

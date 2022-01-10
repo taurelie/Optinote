@@ -29,7 +29,7 @@
                   :width => 20, :crop => :scale,
                   :gravity => :north_west) %></a>
               <% else %>
-                <div class="col-4-float-lzft" class="imgs_student" class="d-flex align-items-center">
+                <div class="col-4-float-left" class="imgs_student" class="d-flex align-items-center">
                 <a href="<%= student_path(student.id) %>">
                 <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
                   {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
