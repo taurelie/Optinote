@@ -20,8 +20,13 @@ class ObservationsController < ApplicationController
 
   def destroy
     @observation = Observation.find(params[:id])
+    @student = @observation.student
     @observation.destroy
     redirect_to student_path(@student)
+  end
+
+  def index
+    @observations = Observation.all
   end
 
   private

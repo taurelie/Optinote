@@ -17,8 +17,21 @@
 <div class="container">
   <% @student.observations.each do |obs| %>
     <div class="filterDiv <%= obs.obs_color.downcase %>"><%= "#{obs.obs_date}   " %><%= obs.note %>
-      <div class='bttns'>
-        <div></div>
+      <div id='bttns'>
+        <div id="bttn_edit">
+          <%= link_to "Edit",
+             %>
+          <a data-confirm="Etes-vous sûr(e) ?" rel="nofollow" data-method="delete" href="/observations/#{obs.id}">
+          </a>
+        </div>
+        <div id="bttn_delete">
+          <%= link_to "Supprimer",
+            observation_path(obs.id),
+            method: :delete,
+            data: { confirm: "Etes-vous sûr(e) ?" } %>
+          <a data-confirm="Etes-vous sûr(e) ?" rel="nofollow" data-method="delete" href="/observations/#{obs.id}">
+          </a>
+        </div>
       </div>
     </div>
   <%end%>

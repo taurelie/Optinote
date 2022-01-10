@@ -1,17 +1,24 @@
-.bttns {
-  align-items: flex-end;
+#bttns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end
 }
 
-.bttn_edit {
-  height: 20;
-  width: 40;
-  border-radius: 5;
-}
-
-.bttn_delete {
-  height: 20;
-  width: 40;
+#bttn_edit {
+  float: left;
+  height: 10;
+  width: 20;
   border-radius: 5;
   background-color: black;
-  color: white;
+  padding: 5;
+}
+
+#bttn_delete {
+  float: right;
+  height: 10;
+  width: 20;
+  border-radius: 5;
+  background-color: black;
+  padding: 5;
 }
