@@ -58,13 +58,16 @@
   font-size: 12px;
   text-align: center;
   padding: 10px 10px 30px 10px;
-  border: 1px solid #EAEAEA;
-  border-radius: 8px;
-  background-color: white;
+  border: none;
+  border-radius: 50px;
+  opacity: 0.8;
+  color: transparent;
 }
 
 .obs_color-selector:checked + label {
-  color: rgb(24, 218, 88) !important;
+  // color: rgb(170, 34, 34) !important;
+  border: 3px solid #353434;
+  opacity: 1
 }
 
 
@@ -74,66 +77,3 @@
   width: 100%;
   border-radius: 8px;
 }
-
-
-
-//  test checkbox colors
-//  // Colors
-// $color-1: #2ecc71;
-// $color-2: #a7a7a7;
-// $color-3: #e74c3c;
-
-
-// .custom-radios {
-
-//   div {
-//     display: inline-block;
-//   }
-
-//   input[type="radio"] {
-//     display: none;
-
-//     + label {
-//       color: #333;
-//       font-family: Arial, sans-serif;
-//       font-size: 14px;
-
-//       span {
-//         display: inline-block;
-//         width: 40px;
-//         height: 40px;
-//         margin: -1px 4px 0 0;
-//         vertical-align: middle;
-//         cursor: pointer;
-//         border-radius: 50%;
-//         border: 2px solid #FFFFFF;
-//         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-//         background-repeat: no-repeat;
-//         background-position: center;
-//         text-align: center;
-//         line-height: 44px;
-
-//         img {
-//           opacity: 0;
-//           transition: all .3s ease;
-//         }
-//       }
-//     }
-
-//     &#color-1 + label span {
-//       background-color: $color-1;
-//     }
-
-//     &#color-2 + label span {
-//       background-color: $color-2;
-//     }
-
-//     &#color-3 + label span {
-//       background-color: $color-3;
-//     }
-
-//     &:checked + label span img {
-//       opacity: 1;
-//     }
-//   }
-// }
