@@ -1,7 +1,8 @@
 
 <div class="card-student">
-  <%= cl_image_tag(@student.photo.key, :format => :png)%>
-  <%# <img src="https://1en5vh48t4rqdnq1j3h9ihn4-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/child-bored-in-school-860x420.jpeg" /> %>
+  <%= link_to student_path(id: @student.id) do %>
+    <%= cl_image_tag(@student.photo.key, :format => :png) %>
+  <% end %>
   <div class="card-student-infos">
   <h2><strong><%=@student.first_name%></strong> <%=@student.last_name%></h2>
   <h3><%=@student.classroom.name%></h3>
@@ -30,7 +31,5 @@
                   input_html: {class: 'obs_color-selector'},
                   collection: Observation::OBS_COLOR %>
 
-
       <%= f.button :submit, "valider", :class => "btn_valider" %>
       <% end %>
-    </div>

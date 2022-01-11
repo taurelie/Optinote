@@ -1,0 +1,25 @@
+.dasboard {
+  padding-inline-start: 5px;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+.card_user {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.planet_owner {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container_links {
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-around;
+}

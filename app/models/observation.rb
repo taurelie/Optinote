@@ -1,5 +1,5 @@
 class Observation < ApplicationRecord
-  CATEGORY = ["Relation à l'autre", "Expression", "Attitudes corporelles", "Gestes / Actes quotidiens", "Écriture", "Lecture", "Mathématiques", "Comportement", "Environnement", "Retard", "Autre"]
+  CATEGORY = ["Relation à l'autre", "Expression", "Attitudes corporelles", "Gestes / Actes quotidiens", "Écriture", "Lecture", "Mathématiques", "Comportement", "Environnement", "Absence", "Autre"]
   OBS_COLOR = ["green", "grey", "red"]
   belongs_to :student
   belongs_to :user
@@ -14,5 +14,4 @@ class Observation < ApplicationRecord
   def display_date
     self.creation_date.strftime("%d/%m/%Y")
   end
-
 end
