@@ -28,6 +28,14 @@
   background-color: white;
 }
 
+// .category-item{
+//   .form-check-label {
+//     &.collection_radio_buttons{
+//       color: grey !important;
+//     }
+//   }
+// }
+
 .category-selector:checked + label {
   color: white !important;
   background-color:rgb(122, 159, 177);
@@ -71,8 +79,25 @@
 
 
 .btn_valider {
-  border: 1px solid #83c9f8 !important;
-  background-color: royalblue !important;
+  border: 1px solid #5a5a5a !important;
+  // background-color: royalblue !important;
+  background-color: #80136D !important;
+  color: white !important;
+  font-weight: bold;
   width: 100%;
   border-radius: 8px;
+}
+
+.obs_color-item{
+  .form-check-label {
+    &.collection_radio_buttons{
+      color: transparent !important;
+    }
+  }
+}
+
+.container_label_color {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
