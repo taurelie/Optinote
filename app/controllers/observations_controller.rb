@@ -12,7 +12,7 @@ class ObservationsController < ApplicationController
     @observation.student = @student
     @observation.user = current_user
     if @observation.save
-      redirect_to student_path(@student)
+      redirect_to new_observation_path(id: @student.id), notice: "Observation créée pour #{@student.first_name} #{@student.last_name}"
     else
       render :new
     end
