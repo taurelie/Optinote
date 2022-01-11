@@ -1,3 +1,4 @@
+<script src="https://kit.fontawesome.com/fd355f87ce.js" crossorigin="anonymous"></script>
 
 <div class="card-student">
   <%= cl_image_tag(@student.photo.key, :format => :png)%>
@@ -19,15 +20,15 @@
 <div class="container trigger_popup_fricc">
   <% @observations.each do |obs| %>
     <div class="filterDiv <%= obs.obs_color.downcase %>" data-link-id=<%= obs.id %> >
-      <%= "#{obs.display_date}" %>    -     <%= obs.category %>
+      <div class="positionnement"><%= "#{obs.display_date}" %>    -     <%= obs.category %></div>
       <div id='bttns'>
-          <%= link_to "Editer", edit_observation_path(obs), class:"edit_link" %>
-          <%= link_to "Supprimer",
-            observation_path(obs.id),
-            method: :delete,
-            class:"delete_link",
-            data: { confirm: "Etes-vous sûr(e) ?" } %>
-          <a data-confirm="Etes-vous sûr(e) ?" rel="nofollow" data-method="delete" href="/observations/#{obs.id}"></a>
+        <div id='bttn_edit'><%= link_to edit_observation_path(obs), class:"edit_link" do %>
+          <i class="far fa-edit"></i>
+        <% end %></div>
+        <div id='bttn_delete'><%= link_to observation_path(obs.id), method: :delete, class:"delete_link", data: { confirm: "Etes-vous sûr(e) ?" } do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+          <a data-confirm="Etes-vous sûr(e) ?" rel="nofollow" data-method="delete" href="/observations/#{obs.id}"></a></div>
       </div>
     </div>
     <div class="modal-obs" data-modal-id=<%= obs.id %>>
