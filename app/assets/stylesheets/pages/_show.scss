@@ -2,20 +2,21 @@
 .filterDiv {
   background-color: #2196F3;
   color: #FFFFFF;
-  width: 100%;
-  line-height: 50px;
+  width: 90%;
+  line-height: 40px;
   text-align: left;
   margin: 2px;
   padding-left: 2%;
+  padding-right: 2%;
   display: none;
 }
 
 .red {
-  background-color: #F05D09;
+  background-color: #FD1015;
 }
 
 .green {
-  background-color: #69FA00;
+  background-color: #1EDD88;
 }
 
 .grey {
@@ -47,4 +48,15 @@
 .btn.active {
   background-color: #666;
   color: white;
+}
+
+.organize_ligne {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.positionnement {
+  position: absolute;
 }

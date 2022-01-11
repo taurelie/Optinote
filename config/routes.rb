@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   delete "observations/:id", to: "observations#destroy"
   get "observations/:id/edit", to: "observations#edit"
   patch "observations/:id", to: "observations#update"
+
+  get '/dashboard', to: 'pages#dashboard', as: :dashboard
 end
