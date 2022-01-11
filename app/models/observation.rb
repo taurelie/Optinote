@@ -14,5 +14,4 @@ class Observation < ApplicationRecord
   def display_date
     self.creation_date.strftime("%d/%m/%Y")
   end
-
 end
