@@ -29,8 +29,11 @@
                   item_wrapper_class: 'obs_color-item',
                   input_html: {class: 'obs_color-selector'},
                   collection: Observation::OBS_COLOR %>
-
-
-      <%= f.button :submit, "valider", :class => "btn_valider" %>
+      <div class="container_label_color" style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
+        <div> Difficultés</div>
+        <div>Neutre</div>
+        <div>Forces</div>
+      </div>
+      <%= f.button :submit, "VALIDER", :class => "btn_valider" %>
       <% end %>
     </div>

@@ -7,6 +7,10 @@
   </div>
 </div>
 
+
+<h3><strong>Modifier mon Observation</strong></h3>
+
+
 <div class="container_form">
   <div class="form">
     <%= simple_form_for(@observation) do |f| %>
@@ -28,7 +32,7 @@
                   input_html: {class: 'obs_color-selector'},
                   collection: Observation::OBS_COLOR %>
 
-        <%= f.button :submit %>
+        <%= f.button :submit, "Enregistrer les changements", :class => "btn_valider"  %>
     <% end %>
   </div>
 </div>
