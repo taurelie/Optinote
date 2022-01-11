@@ -1,0 +1,19 @@
+<h3 style=text-align:center>Mon compte</h3>
+
+<div class="contenaire" class='container_infos'>
+  <div class="card_user">
+    <div class="user_bio">
+      <div class="container_infos">
+        <div>Nom :</div>
+        <div class="donnees"><%= @user.first_name %></div>
+      </div>
+      <div class="container_infos">
+        <div>Prénom :</div>
+        <div class="donnees"><%= @user.last_name %></div>
+      </div>
+      <div class="container_infos">
+        <div>Email :</div>
+        <div class="donnees"><%= @user.email%></div>
+      </div>
+    </div>
+  </div>

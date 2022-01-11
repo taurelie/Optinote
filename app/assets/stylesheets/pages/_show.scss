@@ -1,25 +1,29 @@
 
 .filterDiv {
-  background-color: #2196F3;
+  background-color: #f6f6f7;
   color: #FFFFFF;
-  width: 100%;
-  line-height: 50px;
+  width: 90%;
+  line-height: 40px;
   text-align: left;
   margin: 2px;
   padding-left: 2%;
+  padding-right: 2%;
   display: none;
 }
 
 .red {
-  background-color: #F2C501;
+  //background-color: #FD1015;
+  border-left: 25px solid #F2C501;
 }
 
 .green {
-  background-color: #2D95C2;
+  //background-color: #1EDD88;
+  border-left: 25px solid #2D95C2;
 }
 
 .grey {
-  background-color: #94D8CB;
+  //background-color: grey;
+  border-left: 25px solid #94D8CB;
 }
 
 .show {
@@ -47,4 +51,16 @@
 .btn.active {
   background-color: #666;
   color: white;
+}
+
+.organize_ligne {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.positionnement {
+  position: absolute;
+  vertical-align: middle;
 }

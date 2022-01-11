@@ -1,3 +1,4 @@
+<script src="https://kit.fontawesome.com/fd355f87ce.js" crossorigin="anonymous"></script>
 
 <div class="card-student">
   <%= cl_image_tag(@student.photo.key, :format => :png)%>
@@ -8,33 +9,24 @@
 </div>
 
 <div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('red')"> Reds</button>
-  <button class="btn" onclick="filterSelection('grey')"> Greys</button>
-  <button class="btn" onclick="filterSelection('green')"> Greens</button>
+  <button class="btn active" onclick="filterSelection('all')"> Tout</button>
+  <button class="btn" onclick="filterSelection('red')"> Difficultés</button>
+  <button class="btn" onclick="filterSelection('grey')"> Neutre</button>
+  <button class="btn" onclick="filterSelection('green')"> Forces</button>
 </div>
-
-
 
 <div class="container trigger_popup_fricc">
   <% @observations.each do |obs| %>
-    <div class="filterDiv <%= obs.obs_color.downcase %>" data-link-id=<%= obs.id %> >
-      <%= "#{obs.display_date}" %>    -     <%= obs.category %>
-      <div id='bttns'>
-          <%= link_to "Editer", edit_observation_path(obs), class:"edit_link" %>
-          <%= link_to "Supprimer",
-            observation_path(obs.id),
-            method: :delete,
-            class:"delete_link",
-            data: { confirm: "Etes-vous sûr(e) ?" } %>
-          <a data-confirm="Etes-vous sûr(e) ?" rel="nofollow" data-method="delete" href="/observations/#{obs.id}"></a>
+    <div class="filterDiv <%= obs.obs_color.downcase %>" data-link-id=<%= obs.id %> data-note-content="<%= obs.note %>">
+      <p id="obs-title"><%= "#{obs.display_date}" %>    -     <%= obs.category %></p>
+      <div class="d-flex justify-content-between">
+        <%= link_to "Editer", edit_observation_path(obs), class:"edit_link" %>
+        <%= link_to "Supprimer",
+          observation_path(obs.id),
+          method: :delete,
+          class:"delete_link",
+          data: { confirm: "Etes-vous sûr(e) ?" } %>
       </div>
-    </div>
-    <div class="modal-obs" data-modal-id=<%= obs.id %>>
-      <div>
-        <p><%= obs.note %></p>
-      </div>
-      <span class='closeBtn btn btn-primary' data-close-id=<%= obs.id %>>fermer</span>
     </div>
   <%end%>
 </div>

@@ -1,27 +1,18 @@
+import Swal from "sweetalert2";
+
 const modalTrigger = () => {
-const triggerModal = document.querySelectorAll('.filterDiv');
-const modals = document.querySelectorAll('.modal-obs');
-triggerModal.forEach(link => {
-  link.addEventListener('click', event => {
-    modals.forEach(modal => {
-      if (modal.dataset.modalId === event.currentTarget.dataset.linkId) {
-        modal.classList.add('show');
-      }
+  const observations = document.querySelectorAll('.filterDiv');
+  if (observations.length >= 1) {
+    observations.forEach(obsDiv => {
+      obsDiv.querySelector("#obs-title").addEventListener('click', event => {
+        /* Generqte sweetalert */
+        const content = obsDiv.dataset.noteContent;
+        Swal.fire(
+          "Note",
+          content,
+        )
+      })
     })
-  })
-})
-
-const closeBtns = document.querySelectorAll('.closeBtn');
-closeBtns.forEach(closeBtn => {
-  closeBtn.addEventListener('click', event => {
-    modals.forEach(modal => {
-      console.log('yy')
-      if (modal.dataset.modalId === event.currentTarget.dataset.closeId) {
-        modal.classList.remove('show');
-      }
-    })
-  })
-})
+  }
 }
-
 export {modalTrigger}
