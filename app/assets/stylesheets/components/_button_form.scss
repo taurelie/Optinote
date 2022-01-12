@@ -21,7 +21,10 @@
   font-size: 12px;
   text-align: center;
   align-items: center;
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin: 3%;
   border: 1px solid #e7e7e7;
   border-radius: 8px;
@@ -38,7 +41,8 @@
 
 .category-selector:checked + label {
   color: white !important;
-  background-color:rgb(122, 159, 177);
+  font-size: 12px;
+  background-color:#80136D;
 }
 
 // button colors
