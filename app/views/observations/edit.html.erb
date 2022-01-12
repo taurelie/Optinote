@@ -1,6 +1,8 @@
 
 <div class="card-student">
-  <%= cl_image_tag(@observation.student.photo.key, :format => :png)%>
+  <%= link_to student_path(id: @observation.student.id) do %>
+    <%= cl_image_tag(@observation.student.photo.key, :format => :png) %>
+  <% end %>
   <div class="card-student-infos">
   <h2><strong><%=@observation.student.first_name%></strong> <%=@observation.student.last_name%></h2>
   <h3><%=@observation.student.classroom.name%></h3>
@@ -13,7 +15,7 @@
 
 <div class="container_form">
   <p></p>
-    <div class="form position_form">
+    <div class="form">
       <%= simple_form_for [@observation] do |f| %>
       <%= f.input :category, :label => "Catégorie de l'Observation:",
                   as: :radio_buttons,
@@ -33,7 +35,7 @@
                   input_html: {class: 'obs_color-selector'},
                   collection: Observation::OBS_COLOR %>
 
-      <div class="container_label_color" id="color_legend" style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
+      <div class="container_label_color" style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
         <div> Difficultés</div>
         <div>Neutre</div>
         <div>Forces</div>
