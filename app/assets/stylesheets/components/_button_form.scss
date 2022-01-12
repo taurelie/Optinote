@@ -73,7 +73,8 @@
 
 .obs_color-selector:checked + label {
   // color: rgb(170, 34, 34) !important;
-  border: 3px solid #353434;
+  // border: 2px solid white;
+  border: 10px double white;
   opacity: 1
 }
 
