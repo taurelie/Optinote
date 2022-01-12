@@ -1,10 +1,29 @@
 
- <!-- This file lives in public/500.html -->
- <div>
- <h2> Bonjour! </h2>
- </div>
+<head>
+  <title>We're sorry, but something went wrong (500)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body class="rails-default-error-page">
+  <!-- This file lives in public/500.html -->
   <div class="dialog">
-    <div class="error-500" data-text="C'est le rôle essentiel du professeur d'éveiller la joie de travailler et de connaître. --Albert Einstein">
+    <div class="error-500" data-text="L'amour est un meilleur enseignant que le devoir.--Albert Einstein">
       <img src="https://www.optinote.xyz/assets/Optinote_logo-40eac63a3da1a827bf4e57600244b74ff6ac4b6a602bc5d4d3b04119b6be6558.png" alt="optinote-logo" height="50%" width="100%">
     </div>
   </div>
+</body>
+
+<script>
+  const error = document.querySelector(".error-500");
+    let i = 0, data = "", text = error.getAttribute("data-text");
+
+    let typing = setInterval(() => {
+      if (i == text.length) {
+        clearInterval(typing);
+      } else {
+        data += text[i];
+        document.querySelector(".error-500").setAttribute("data-text", data);
+        i++;
+      }
+    }, 100);
+</script>
