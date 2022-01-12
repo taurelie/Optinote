@@ -1,19 +1,22 @@
-<h3 style=text-align:center>Mon compte</h3>
 
-<div class="contenaire" class='container_infos'>
-  <div class="card_user">
-    <div class="user_bio">
-      <div class="container_infos">
-        <div>Nom :</div>
-        <div class="donnees"><%= @user.first_name %></div>
-      </div>
-      <div class="container_infos">
-        <div>Prénom :</div>
-        <div class="donnees"><%= @user.last_name %></div>
-      </div>
-      <div class="container_infos">
-        <div>Email :</div>
-        <div class="donnees"><%= @user.email%></div>
-      </div>
-    </div>
+<!-- This file lives in public/500.html -->
+<div class="dialog">
+  <div class="error-500" data-text="L'amour est un meilleur enseignant que le devoir.--Albert Einstein">
+    <img src="https://www.optinote.xyz/assets/Optinote_logo-40eac63a3da1a827bf4e57600244b74ff6ac4b6a602bc5d4d3b04119b6be6558.png" alt="optinote-logo" height="50%" width="100%">
   </div>
+</div>
+
+<script>
+  const error = document.querySelector(".error-500");
+    let i = 0, data = "", text = error.getAttribute("data-text");
+
+    let typing = setInterval(() => {
+      if (i == text.length) {
+        clearInterval(typing);
+      } else {
+        data += text[i];
+        document.querySelector(".error-500").setAttribute("data-text", data);
+        i++;
+      }
+    }, 100);
+</script>
