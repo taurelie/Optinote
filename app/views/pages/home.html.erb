@@ -1,7 +1,16 @@
+<%# <div >
+  <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+  <p>It <em>types</em> out sentences.</p>
+</div>
+
+ %>
 <div class="body">
-  <div class="hello">
-    <h2>Bonjour, <%=@user.first_name%> <%=@user.last_name%></h2>
+  <div class="hello" id="typed-strings">
+    <h6> "Bonjour, <%=@user.first_name%> !"</h6>
+    <small>“Ce sont les élèves les moins doués qui forcent les professeurs à mieux enseigner.” <br>
+    -- De Malcolm Forbes</small>
   </div>
+  <h2 class="justify-content-center" ><span id="typed"></span></h2>
   <div class="classroom">
     <%@current_user.classrooms.each do |classroom| %>
     <h3><%=classroom.name%></h3>

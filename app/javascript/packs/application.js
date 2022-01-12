@@ -27,9 +27,11 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { modalTrigger } from '../plugins/init_student';
 import { initColorBtn } from './colorBtn';
+import { initType } from '../plugins/init_home_bonjour';
 
 document.addEventListener('turbolinks:load', () => {
   modalTrigger();
   // Call your functions here, e.g:
   initColorBtn();
+  initType();
 });
