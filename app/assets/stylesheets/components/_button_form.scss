@@ -64,7 +64,7 @@
   box-sizing: border-box;
   width: 100%;
   font-size: 12px;
-  padding: 10px 10px 30px 10px;
+  padding: 5px, 25px;
   border: none;
   border-radius: 50px;
   opacity: 0.8;
@@ -72,10 +72,9 @@
 }
 
 .obs_color-selector:checked + label {
-  // color: rgb(170, 34, 34) !important;
-  // border: 2px solid white;
-  border: 10px double white;
-  opacity: 1
+  border: 2px solid rgb(128, 125, 127);
+  opacity: 1;
+  color: white;
 }
 
 
@@ -92,7 +91,10 @@
 .obs_color-item{
   .form-check-label {
     &.collection_radio_buttons{
-      color: transparent !important;
+      color: white !important;
+      font-weight: bold;
+      text-align: center;
+      font-size: medium;
     }
   }
 }

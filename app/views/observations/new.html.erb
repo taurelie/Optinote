@@ -29,13 +29,9 @@
                   collection_wrapper_class: 'obs_color-wrapper',
                   item_wrapper_class: 'obs_color-item',
                   input_html: {class: 'obs_color-selector'},
-                  collection: Observation::OBS_COLOR %>
+                  collection: Observation::OBS_COLOR_HASH.keys,
+                  value_method: lambda {|key| Observation::OBS_COLOR_HASH[key]} %>
 
-      <div class="obs_color-wrapper">
-        <div> Difficultés</div>
-        <div>Neutre</div>
-        <div>Forces</div>
-      </div>
       <%= f.button :submit, "VALIDER", :class => "btn_valider" %>
 
       <% end %>
