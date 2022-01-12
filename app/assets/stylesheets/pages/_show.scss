@@ -1,6 +1,6 @@
 
 .filterDiv {
-  background-color: #2196F3;
+  background-color: #f6f6f7;
   color: #FFFFFF;
   width: 90%;
   line-height: 40px;
@@ -12,15 +12,27 @@
 }
 
 .red {
-  background-color: #FD1015;
+  //background-color: #FD1015;
+  border-left: 25px solid #F2C501;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 
 .green {
-  background-color: #1EDD88;
+  //background-color: #1EDD88;
+  border-left: 25px solid #2D95C2;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 
 .grey {
-  background-color: grey;
+  //background-color: grey;
+  border-left: 25px solid #94D8CB;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 
 .show {
@@ -35,6 +47,7 @@
 /* Style the buttons */
 .btn {
   border: none;
+  border-bottom-right-radius: 5px;
   outline: none;
   padding: 12px 16px;
   background-color: #f1f1f1;

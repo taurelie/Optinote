@@ -9,17 +9,14 @@
 </div>
 
 <div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('red')"> Reds</button>
-  <button class="btn" onclick="filterSelection('grey')"> Greys</button>
-  <button class="btn" onclick="filterSelection('green')"> Greens</button>
+  <button class="btn active" style="background-color: #80136D" onclick="filterSelection('all')"> Tout</button>
+  <button class="btn" style="background-color: #F2C501" onclick="filterSelection('red')"> Difficultés</button>
+  <button class="btn" style="background-color: #94D8CB" onclick="filterSelection('grey')"> Neutre</button>
+  <button class="btn" style="background-color: #2D95C2" onclick="filterSelection('green')"> Forces</button>
 </div>
-
-
 
 <div class="container trigger_popup_fricc">
   <% @observations.each do |obs| %>
-
     <div class="filterDiv <%= obs.obs_color.downcase %>" data-link-id=<%= obs.id %> data-note-content="<%= obs.note %>">
       <p class="positionnement" id="obs-title"><%= "#{obs.display_date}" %>    -     <%= obs.category %></p>
       <div id='bttns'>
@@ -28,7 +25,7 @@
         <% end %></div>
         <div id='bttn_delete'><%= link_to observation_path(obs.id), method: :delete, class:"delete_link", data: { confirm: "Etes-vous sûr(e) ?" } do %>
           <i class="far fa-trash-alt"></i>
-        <% end %>
+        <% end %></div>
       </div>
     </div>
   <%end%>
