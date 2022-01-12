@@ -7,7 +7,6 @@
 .classroom {
   text-align: center;
   background-color: white;
-  box-shadow: #95a5a6;
   padding: 10px;
 }
 
@@ -40,11 +39,22 @@
 
 .home_card {
   background-color: white;
-  line-height: 30px;
+  line-height: 40px;
   text-align: center;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   box-shadow: 3px 3px 2px #95a5a6;
   padding: 2%;
   vertical-align: middle;
+}
+
+.hello {
+  margin: 25px;
+}
+
+.image_color {
+  background-image: url('https://res.cloudinary.com/dowgjinna/image/upload/v1641988355/bg_color_czmm70.jpg');
+  /* height: 5px; */
+  height: 10px;
+  margin-bottom: 30px;
 }

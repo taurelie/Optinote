@@ -10,12 +10,17 @@
     <small>“Ce sont les élèves les moins doués qui forcent les professeurs à mieux enseigner.” <br>
     -- De Malcolm Forbes</small>
   </div>
-  <h2 class="justify-content-center" ><span id="typed"></span></h2>
+
+  <div class="image_color"></div>
+
+  <div></div>
+
   <div class="classroom">
     <%@current_user.classrooms.each do |classroom| %>
     <h3><%=classroom.name%></h3>
     <%end%>
   </div>
+  <%#<div class="image_color"></div> %>
 
   <div class="list_students">
     <%@current_user.classrooms.each do |classroom| %>
@@ -33,7 +38,7 @@
                 <a href="<%= student_path(student.id) %>">
                 <%if pins == true %>
                   <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
-                    {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
+                    {:gravity=>"face", :height=>70, :width=>70, :crop=>"fill"},
                     {:radius=>"max"}],
                   :overlay => "notepins2_owhk7h.png",
                     :width => 20, :crop => :scale,
@@ -42,7 +47,7 @@
                   <div class="col-4-float-left" class="imgs_student" class="d-flex align-items-center">
                   <a href="<%= student_path(student.id) %>">
                   <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
-                    {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
+                    {:gravity=>"face", :height=>70, :width=>70, :crop=>"fill"},
                     {:radius=>"max"}])%></a>
                   </div>
                 <% end %>
