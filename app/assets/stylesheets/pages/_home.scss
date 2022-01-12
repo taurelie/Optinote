@@ -19,6 +19,7 @@
   text-align: center;
   margin: auto;
   color: white;
+  vertical-align: middle;
 }
 
 .imgs_student {
@@ -34,4 +35,15 @@
   height: 40px;
   width:  40px;
   border-radius: 50;
+}
+
+.home_card {
+  background-color: white;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  box-shadow: 3px 3px 2px #95a5a6;
+  padding: 2%;
+  vertical-align: middle;
 }
