@@ -6,7 +6,9 @@
 
 .classroom {
   text-align: center;
-  background-color: white;
+  background-color: #80136d;
+  /*padding-top: 5px;
+  padding-bottom: 1px;*/
 }
 
 .student {
@@ -58,11 +60,19 @@
   background-image: url('https://res.cloudinary.com/dowgjinna/image/upload/v1641988355/bg_color_czmm70.jpg');
   /* height: 5px; */
   /* height: 20px; */
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   padding: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .home_trait {
-  background-image: url('https://res.cloudinary.com/dowgjinna/image/upload/v1641988355/bg_color_czmm70.jpg');
+  /*background-image: url('https://res.cloudinary.com/dowgjinna/image/upload/v1641988355/bg_color_czmm70.jpg');*/
+  background-color: grey;
   height: 2px;
+}
+
+#color_text {
+  color: white;
+  font-size: 25px;
 }
