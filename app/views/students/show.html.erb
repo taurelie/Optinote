@@ -10,15 +10,15 @@
 
 <div id="myBtnContainer">
   <button class="btn active" style="background-color: #80136D" onclick="filterSelection('all')"> Tout</button>
-  <button class="btn" style="background-color: #F2C501" onclick="filterSelection('red')"> Difficultés</button>
-  <button class="btn" style="background-color: #94D8CB" onclick="filterSelection('grey')"> Neutre</button>
-  <button class="btn" style="background-color: #2D95C2" onclick="filterSelection('green')"> Forces</button>
+  <% Observation::OBS_COLOR.keys.each do |level|  %>
+      <button class="btn" style="background-color: <%=Observation::OBS_COLOR[level]%>;" onclick="filterSelection('<%=level.downcase %>')"> <%=level%></button>
+  <% end %>
 </div>
 
 <div class="container trigger_popup_fricc">
   <% @observations.each do |obs| %>
-    <div class="filterDiv <%= obs.obs_color.downcase %>" data-link-id=<%= obs.id %> data-note-content="<%= obs.note %>">
-      <p class="positionnement" id="obs-title"><%= "#{obs.display_date}" %>    -     <%= obs.category %></p>
+    <div class="filterDiv obs <%= obs.obs_color.downcase %>" style="border-left: 25px solid <%= Observation::OBS_COLOR[obs.obs_color.to_sym] %>;" data-link-id=<%= obs.id %> data-note-content="<%= obs.note %>">
+      <p class=positionnement id="obs-title"><%= "#{obs.display_date}" %>  -  <%= obs.category %></p>
       <div id='bttns'>
         <div id='bttn_edit'><%= link_to edit_observation_path(obs), class:"edit_link" do %>
           <i class="far fa-edit"></i>

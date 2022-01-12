@@ -21,7 +21,10 @@
   font-size: 12px;
   text-align: center;
   align-items: center;
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin: 3%;
   border: 1px solid #e7e7e7;
   border-radius: 8px;
@@ -38,7 +41,8 @@
 
 .category-selector:checked + label {
   color: white !important;
-  background-color:rgb(122, 159, 177);
+  font-size: 12px;
+  background-color:#80136D;
 }
 
 // button colors
@@ -64,7 +68,7 @@
   box-sizing: border-box;
   width: 100%;
   font-size: 12px;
-  padding: 10px 10px 30px 10px;
+  padding: 5px, 25px;
   border: none;
   border-radius: 50px;
   opacity: 0.8;
@@ -72,9 +76,9 @@
 }
 
 .obs_color-selector:checked + label {
-  // color: rgb(170, 34, 34) !important;
-  border: 3px solid #353434;
-  opacity: 1
+  border: 2px solid rgb(128, 125, 127);
+  opacity: 1;
+  color: white;
 }
 
 
@@ -91,7 +95,10 @@
 .obs_color-item{
   .form-check-label {
     &.collection_radio_buttons{
-      color: transparent !important;
+      color: white !important;
+      font-weight: bold;
+      text-align: center;
+      font-size: medium;
     }
   }
 }

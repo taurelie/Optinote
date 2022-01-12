@@ -33,13 +33,8 @@
                   collection_wrapper_class: 'obs_color-wrapper',
                   item_wrapper_class: 'obs_color-item',
                   input_html: {class: 'obs_color-selector'},
-                  collection: Observation::OBS_COLOR %>
-
-      <div class="container_label_color" style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
-        <div> Difficultés</div>
-        <div>Neutre</div>
-        <div>Forces</div>
-      </div>
+                  collection: Observation::OBS_COLOR.keys,
+                  value_method: lambda {|key| Observation::OBS_COLOR[key]} %>
 
       <%= f.button :submit, "MODIFIER", :class => "btn_valider" %>
 
