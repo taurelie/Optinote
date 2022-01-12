@@ -7,7 +7,6 @@
 .classroom {
   text-align: center;
   background-color: white;
-  padding: 10px;
 }
 
 .student {
@@ -27,7 +26,9 @@
 }
 
 .list_students {
-  padding: 20px;
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .plusadd {
@@ -48,12 +49,20 @@
 }
 
 .hello {
-  margin: 25px;
+  margin: 15px;
+  background-color: rgba($color: white, $alpha: 0.7);
+  padding: 10px;
 }
 
 .image_color {
   background-image: url('https://res.cloudinary.com/dowgjinna/image/upload/v1641988355/bg_color_czmm70.jpg');
   /* height: 5px; */
-  height: 20px;
-  margin-bottom: 30px;
+  /* height: 20px; */
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.home_trait {
+  background-image: url('https://res.cloudinary.com/dowgjinna/image/upload/v1641988355/bg_color_czmm70.jpg');
+  height: 2px;
 }

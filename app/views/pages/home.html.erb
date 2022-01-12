@@ -1,17 +1,18 @@
 <div class="body">
-  <div class="hello" id="typed-strings">
-    <small>“Ce sont les élèves les moins doués qui forcent les professeurs à mieux enseigner.” <br>
-    -- De Malcolm Forbes</small>
+  <div class="image_color">
+    <div class="hello" id="typed-strings">
+      <small>“Ce sont les élèves les moins doués qui forcent les professeurs à mieux enseigner.” <br>
+      -- De Malcolm Forbes</small>
+    </div>
   </div>
 
-  <div class="image_color"></div>
-
+  <%#<div class="home_trait"></div>%>
   <div class="classroom">
     <%@current_user.classrooms.each do |classroom| %>
     <h3><%=classroom.name%></h3>
     <%end%>
   </div>
-
+  <%#<div class="home_trait"></div>%>
   <%#<div class="image_color"></div>%>
 
   <div class="list_students">
