@@ -1,0 +1,8 @@
+# config/meta.yml
+
+meta_product_name: "Optinote"
+meta_title: "Optinote - Note quicker, note better !"
+meta_description: "Pain:
+An explosion teaching difficulties because of the difficulties reading comprehension. 40% of 6th grade students in France had this problem. Solution:Get an obervation of each student a whole vision of his/her lecture problems"
+meta_image: "Optinote_logo.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
