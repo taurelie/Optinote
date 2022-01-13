@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "/", class: "navbar-brand" do %>
-    <%= image_tag "Optinote_logo.png", alt: "Optinote", width: 300 %>
+  <%= link_to "/home", class: "navbar-brand" do %>
+    <%= image_tag "https://res.cloudinary.com/dowgjinna/image/upload/v1642073840/logo_wagon_opti4c_croagr.png", alt: "Optinote", width: 300 %>
   <% end %>
 
   <div class="classroom_name">
@@ -20,7 +20,7 @@
       <% if user_signed_in? %>
           <% if @student != nil %>
             <li class="nav-item active">
-              <%= link_to "Ma classe", root_path, class: "nav-link" %>
+              <%= link_to "Ma classe", home_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
               <%= link_to "Observations", new_observation_path(id: @student.id), class: "nav-link" %>

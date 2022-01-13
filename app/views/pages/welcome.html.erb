@@ -1,0 +1,22 @@
+<a href="<%= home_path %>">
+  <div class="dialog">
+    <div class="error-500" data-text="Note quicker, Note better !">
+      <img src="https://res.cloudinary.com/dowgjinna/image/upload/v1642073840/logo_wagon_opti4d_dhefxo.png" alt="optinote-logo" height="50%" width="100%">
+    </div>
+  </div>
+
+  <script>
+    const error = document.querySelector(".error-500");
+      let i = 0, data = "", text = error.getAttribute("data-text");
+
+      let typing = setInterval(() => {
+        if (i == text.length) {
+          clearInterval(typing);
+        } else {
+          data += text[i];
+          document.querySelector(".error-500").setAttribute("data-text", data);
+          i++;
+        }
+      }, 100);
+  </script>
+</a>

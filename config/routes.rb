@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
-  root to: 'pages#home'
+  root to: 'pages#welcome'
 
   resources :students do
     member do
@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   patch "observations/:id", to: "observations#update"
 
   get '/dashboard', to: 'pages#dashboard', as: :dashboard
+  get '/welcome', to: 'pages#welcome', as: :welcome
+  get '/home', to: 'pages#home', as: :home
 end
