@@ -4,8 +4,8 @@
       <%= cl_image_tag(@observation.student.photo.key, :format => :png) %>
     <% end %>
     <div class="card-student-infos">
-    <h2><strong><%=@observation.student.first_name%></strong> <%=@observation.student.last_name%></h2>
-    <h3><%=@observation.student.classroom.name%></h3>
+    <h3><strong><%=@observation.student.first_name%></strong> <%=@observation.student.last_name%></h3>
+    <h2><%=@observation.student.classroom.name%></h2>
   </div>
 </div>
 
