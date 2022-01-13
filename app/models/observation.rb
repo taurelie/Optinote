@@ -6,6 +6,7 @@ class Observation < ApplicationRecord
     "Forces": "#2D95C2",
   }
 
+
   belongs_to :student
   belongs_to :user
 
