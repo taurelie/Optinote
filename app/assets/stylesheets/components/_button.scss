@@ -6,10 +6,19 @@
 .delete_link {
   position: center;
   color: midnightblue;
-  padding-right: 3px;
+  padding-right: 2px;
 }
 
 #bttns {
   text-align: right;
   z-index: 1;
+}
+
+#bttn_delete {
+  flex-grow: 1;
+}
+
+#bttn_edit {
+  margin-bottom: 3px;
+  margin-top: 4px;
 }
