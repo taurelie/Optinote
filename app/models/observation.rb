@@ -13,6 +13,7 @@ class Observation < ApplicationRecord
   validates :category, presence: true
   validates :obs_color, presence: true
 
+
   def creation_date
     self.obs_date || self.created_at
   end
