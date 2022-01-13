@@ -9,7 +9,7 @@ img_caroline = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641
 img_florian = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471951/WAGON/Florian_kp96z3.jpg')
 img_carlos = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471950/WAGON/Carlos_vaymrg.jpg')
 img_isabelle = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641552467/WAGON/Isabelle_s98zgg.jpg')
-img_gladys = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471951/WAGON/Gladys_ok8dyy.jpg')
+img_gladys = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1642088116/WAGON/Gladys_uk4hy5.jpg')
 img_nathan = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471951/WAGON/Nathan_njvrdl.jpg')
 img_maxime = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471951/WAGON/Maxime_y0bt3h.jpg')
 img_maya = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471951/WAGON/Maya_fmkpdz.jpg')
@@ -23,7 +23,7 @@ img_lucas = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471
 img_gerald = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471951/WAGON/Gerald_gwpn42.jpg')
 img_aziz = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471950/WAGON/Aziz_teue97.jpg')
 img_sylvain = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471952/WAGON/Sylvain_wmj8jh.jpg')
-img_fatia = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471951/WAGON/Fatia_eylbsv.jpg')
+img_fatia = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1642088117/WAGON/Fatia_otprrp.jpg')
 img_timeo = URI.open('https://res.cloudinary.com/dowgjinna/image/upload/v1641471952/WAGON/Tim%C3%A9o_qfa1b0.jpg')
 
 puts 'seeds user'
@@ -47,7 +47,7 @@ ipetit = Student.create!(first_name: 'Isabelle', last_name: 'Petit', classroom: 
 ipetit.photo.attach(io: img_isabelle, filename: 'Isabelle_s98zgg', content_type: 'image/jpg')
 
 grobert = Student.create!(first_name: 'Gladys', last_name: 'Robert', classroom: ce1)
-grobert.photo.attach(io: img_gladys, filename: 'Gladys_ok8dyy.jpg', content_type: 'image/jpg')
+grobert.photo.attach(io: img_gladys, filename: 'Gladys_uk4hy5.jpg', content_type: 'image/jpg')
 
 nrichard = Student.create!(first_name: 'Nathan', last_name: 'Richard', classroom: ce1)
 nrichard.photo.attach(io: img_nathan, filename: 'Nathan_njvrdl.jpg', content_type: 'image/jpg')
@@ -89,7 +89,7 @@ sgilly = Student.create!(first_name: 'Sylvain', last_name: 'Gilly', classroom: c
 sgilly.photo.attach(io: img_sylvain, filename: 'Sylvain_wmj8jh.jpg', content_type: 'image/jpg')
 
 fbouzian = Student.create!(first_name: 'Fatia', last_name: 'Bouzian', classroom: ce1)
-fbouzian.photo.attach(io: img_fatia, filename: 'Fatia_eylbsv.jpg', content_type: 'image/jpg')
+fbouzian.photo.attach(io: img_fatia, filename: 'Fatia_otprrp.jpg', content_type: 'image/jpg')
 
 tdeccicio = Student.create!(first_name: 'Timéo', last_name: 'Deccicio', classroom: ce1)
 tdeccicio.photo.attach(io: img_timeo, filename: 'Timéo_qfa1b0.jpg', content_type: 'image/jpg')
