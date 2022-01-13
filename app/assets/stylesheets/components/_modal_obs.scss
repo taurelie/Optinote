@@ -13,3 +13,20 @@
     pointer-events: all;
     }
 }
+
+.swal2-container {
+  width: 100vw;
+}
+
+.alert-info {
+  position: absolute;
+  text-align: center;
+  top: 60%;
+  left: 50%;
+  height: 87px;
+  width: 89vw;
+  transform: translate(-50%, -50%);
+  background-color: rgba(93,47,94,0.8);
+  border-radius: 8px;
+  color: white;
+}

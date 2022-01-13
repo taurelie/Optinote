@@ -46,6 +46,7 @@ SimpleForm.setup do |config|
   config.input_field_valid_class = ''
 
 
+
   # vertical forms
   #
   # vertical default_wrapper
