@@ -3,7 +3,7 @@
   background-color: #f6f6f7;
   color: #FFFFFF;
   width: 90%;
-  line-height: 40px;
+  line-height: 30px;
   text-align: left;
   margin: 2px;
   padding-left: 2%;
@@ -16,6 +16,16 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 8px;
   margin-bottom: 5px;
+  font-size: medium;
+}
+
+#obs-title {
+  font-weight: lighter;
+  margin-top: 8px;
+}
+
+.bas_de_card {
+  display: flex;
 }
 
 // .green {
