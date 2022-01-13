@@ -8,7 +8,7 @@ const modalTrigger = () => {
         /* Generqte sweetalert */
         const content = obsDiv.dataset.noteContent;
         Swal.fire(
-          "Note",
+          `Observation du ${obsDiv.dataset.noteDate}`,
           content,
         )
       })

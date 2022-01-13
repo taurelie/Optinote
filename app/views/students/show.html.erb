@@ -17,7 +17,7 @@
 
 <div class="container trigger_popup_fricc">
   <% @observations.each do |obs| %>
-    <div class="filterDiv <%= obs.obs_color.downcase %>" data-link-id=<%= obs.id %> data-note-content="<%= obs.note %>">
+    <div class="filterDiv <%= obs.obs_color.downcase %>" data-link-id=<%= obs.id %> data-note-content="<%= obs.note %>" data-note-date="<%= obs.display_date %>">
       <p class=positionnement id="obs-title"><%= "#{obs.display_date}" %>    -     <%= obs.category %></p>
       <div id='bttns'>
         <div id='bttn_edit'><%= link_to edit_observation_path(obs), class:"edit_link" do %>
