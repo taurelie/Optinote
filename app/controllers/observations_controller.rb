@@ -32,6 +32,7 @@ class ObservationsController < ApplicationController
 
   def edit
     @observation = Observation.find(params[:id])
+    @student = @observation.student
   end
 
   def update
