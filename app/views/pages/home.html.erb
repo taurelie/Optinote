@@ -1,54 +1,54 @@
-<%# <div >
-  <p>Typed.js is a <strong>JavaScript</strong> library.</p>
-  <p>It <em>types</em> out sentences.</p>
-</div>
-
- %>
 <div class="body">
-  <div class="hello" id="typed-strings">
-    <h6> "Bonjour, <%=@user.first_name%> !"</h6>
-    <small>“Ce sont les élèves les moins doués qui forcent les professeurs à mieux enseigner.” <br>
-    -- De Malcolm Forbes</small>
+  <div class="image_color">
+    <div class="hello" id="typed-strings">
+      <small>“Ce sont les élèves les moins doués qui forcent les professeurs à mieux enseigner.” <br>
+      -- Malcolm Forbes</small>
+    </div>
   </div>
-  <h2 class="justify-content-center" ><span id="typed"></span></h2>
+
+  <%#<div class="home_trait"></div>%>
   <div class="classroom">
     <%@current_user.classrooms.each do |classroom| %>
-    <h3><%=classroom.name%></h3>
+    <p id="color_text"><%=classroom.name%></p>
     <%end%>
   </div>
+  <%#<div class="home_trait"></div>%>
+  <%#<div class="image_color"></div>%>
 
   <div class="list_students">
     <%@current_user.classrooms.each do |classroom| %>
       <div class="container">
         <%classroom.students.order(:last_name).each do |student|%>
-          <%pins = false%>
-          <%@current_user.observations.each do |observation|%>
-            <%if observation.student_id == student.id%>
-              <%pins = true%>
+          <div class="home_card">
+            <%pins = false%>
+            <%@current_user.observations.each do |observation|%>
+              <%if observation.student_id == student.id%>
+                <%pins = true%>
+              <%end%>
             <%end%>
-          <%end%>
-          <div class="row align-items-center">
-            <div class="col-4 justify-content-center" class="imgs_student" class="d-flex align-items-center">
-              <a href="<%= student_path(student.id) %>">
-              <%if pins == true %>
-                <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
-                  {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
-                  {:radius=>"max"}],
-                :overlay => "notepins2_owhk7h.png",
-                  :width => 20, :crop => :scale,
-                  :gravity => :north_west) %></a>
-              <% else %>
-                <div class="col-4-float-left" class="imgs_student" class="d-flex align-items-center">
+            <div class="row align-items-center">
+              <div class="col-4 justify-content-center" class="imgs_student" class="d-flex align-items-center">
                 <a href="<%= student_path(student.id) %>">
-                <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
-                  {:gravity=>"face", :height=>60, :width=>60, :crop=>"fill"},
-                  {:radius=>"max"}])%></a>
-                </div>
-              <% end %>
-            </div>
-            <div class="student_name" class="col-4 justify-content-center" class="d-flex align-items-center"><p><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
-            <div class="col-4 justify-content-center" class="d-flex align-items-center"><a href="<%= new_observation_path(student) %>">
-              <img class="plusadd" src="https://res.cloudinary.com/dowgjinna/image/upload/v1641802443/noteadd2_gdqhf3.png"></a>
+                <%if pins == true %>
+                  <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
+                    {:gravity=>"face", :height=>70, :width=>70, :crop=>"fill"},
+                    {:radius=>"max"}],
+                  :overlay => "notepins2_owhk7h.png",
+                    :width => 20, :crop => :scale,
+                    :gravity => :north_west) %></a>
+                <% else %>
+                  <div class="col-4-float-left" class="imgs_student" class="d-flex align-items-center">
+                  <a href="<%= student_path(student.id) %>">
+                  <%= cl_image_tag(student.photo.key, :format => :png, :transformation=>[
+                    {:gravity=>"face", :height=>70, :width=>70, :crop=>"fill"},
+                    {:radius=>"max"}])%></a>
+                  </div>
+                <% end %>
+              </div>
+              <div class="student_name" class="col-4 justify-content-center" class="d-flex align-items-center"><p id="home_forme_student"><%=student.first_name%><br><%=student.last_name.upcase!%></p></div>
+              <div class="col-4 justify-content-center" class="d-flex align-items-center"><a href="<%= new_observation_path(student) %>">
+                <img class="plusadd" src="https://res.cloudinary.com/dowgjinna/image/upload/v1641802443/noteadd2_gdqhf3.png"></a>
+              </div>
             </div>
           </div>
         <%end%>

@@ -6,9 +6,9 @@
 
 .classroom {
   text-align: center;
-  background-color: white;
-  box-shadow: #95a5a6;
-  padding: 10px;
+  background-color: #80136d;
+  /*padding-top: 5px;
+  padding-bottom: 1px;*/
 }
 
 .student {
@@ -19,7 +19,7 @@
 .student_name {
   text-align: center;
   margin: auto;
-  color: white;
+  vertical-align: middle;
 }
 
 .imgs_student {
@@ -28,11 +28,51 @@
 }
 
 .list_students {
-  padding: 20px;
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .plusadd {
   height: 40px;
   width:  40px;
   border-radius: 50;
+}
+
+.home_card {
+  background-color: white;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 3px;
+  box-shadow: 3px 3px 2px #95a5a6;
+  padding: 2%;
+  vertical-align: middle;
+}
+
+.hello {
+  margin: 15px;
+  background-color: rgba($color: white, $alpha: 0.7);
+  padding: 10px;
+}
+
+.image_color {
+  background-image: url('https://res.cloudinary.com/dowgjinna/image/upload/v1641988355/bg_color_czmm70.jpg');
+  /* height: 5px; */
+  /* height: 20px; */
+  /*margin-bottom: 20px;*/
+  padding: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home_trait {
+  /*background-image: url('https://res.cloudinary.com/dowgjinna/image/upload/v1641988355/bg_color_czmm70.jpg');*/
+  background-color: grey;
+  height: 2px;
+}
+
+#color_text {
+  color: white;
+  font-size: 25px;
 }

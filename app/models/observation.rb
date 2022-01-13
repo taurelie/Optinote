@@ -1,7 +1,10 @@
 class Observation < ApplicationRecord
   CATEGORY = ["Relation à l'autre", "Expression", "Attitudes corporelles", "Gestes / Actes quotidiens", "Écriture", "Lecture", "Mathématiques", "Comportement", "Environnement", "Absence", "Autre"]
-  #OBS_COLOR = ["#F2C501", "#94D8CB", "#2D95C2"]
-  OBS_COLOR = ["#F2C501", "#94D8CB", "#2D95C2"]
+  OBS_COLOR = {
+    "Difficultés": "#F2C501",
+    "Neutre": "#94D8CB",
+    "Forces": "#2D95C2",
+  }
 
 
   belongs_to :student
