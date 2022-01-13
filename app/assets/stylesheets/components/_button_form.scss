@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 0 auto;
+  padding-right: 9px;
 }
 
 .category-item {
@@ -111,4 +113,8 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.form-group {
+  padding-top: 10px;
 }
