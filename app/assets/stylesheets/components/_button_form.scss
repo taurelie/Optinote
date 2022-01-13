@@ -17,7 +17,7 @@
   display: inline-block;
   cursor: pointer;
   box-sizing: border-box;
-  width: 180px;
+  min-width: 165px;
   font-size: 12px;
   text-align: center;
   align-items: center;
@@ -76,7 +76,7 @@
 }
 
 .obs_color-selector:checked + label {
-  border: 2px solid rgb(128, 125, 127);
+  border: 2px solid rgb(128, 125, 127) !important;
   opacity: 1;
   color: white;
 }
