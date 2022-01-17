@@ -20,12 +20,16 @@
 }
 
 #obs-title {
-  font-weight: lighter;
+  font-weight: medium;
   margin-top: 8px;
 }
 
 .bas_de_card {
   display: flex;
+}
+
+.note_card {
+  text-align: left;
 }
 
 // .green {
