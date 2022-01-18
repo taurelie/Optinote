@@ -4,6 +4,6 @@ Hi !
 This is our final project in our formation. 
 It's an web app demo for a teacher who ask us a solution to take notes quickly. 
 
-Database : PostgrSQL
+Database : PostgreSQL
 
 It contains seeds for the demo.
